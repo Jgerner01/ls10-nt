@@ -1,0 +1,7 @@
+# C-Runtime statisch einbinden, damit keine VC++-Runtime installiert sein muss
+[target.x86_64-pc-windows-msvc]
+rustflags = ["-C", "target-feature=+crt-static"]
+
+# Build-Ausgabe außerhalb des synchronisierten Projektordners ablegen
+[build]
+target-dir = "C:/rust-target/ls10-nt"
